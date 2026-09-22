@@ -1,0 +1,4 @@
+WindowsProductName : Windows Server 2022 Standard
+WindowsVersion     : 2009
+OsBuildNumber      : 20348
+OsArchitecture     : 64-bit

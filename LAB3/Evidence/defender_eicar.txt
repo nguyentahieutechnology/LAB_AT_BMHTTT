@@ -1,0 +1,6 @@
+ThreatID            : 2147519003
+InitialDetectionTime: 2026-09-22 08:33:14
+Resources           : file:_C:\LAB3\Evidence\eicar.com.txt
+ActionSuccess       : True
+ThreatName          : Virus:DOS/EICAR_Test_File
+Severity            : Severe

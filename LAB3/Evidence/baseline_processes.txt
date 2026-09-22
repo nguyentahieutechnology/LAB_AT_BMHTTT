@@ -1,0 +1,279 @@
+
+ProcessName                     Id Path
+-----------                     -- ----
+AggregatorHost                8000 
+agy                          20548 C:\Users\nguye\AppData\Local\agy\bin\agy.exe
+AppActions                   21464 C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\AppActions.exe
+ApplicationFrameHost         23416 C:\WINDOWS\system32\ApplicationFrameHost.exe
+AppVShNotify                 10512 C:\Program Files\Common Files\Microsoft Shared\ClickToRun\AppVShNotify.exe
+ArmouryCrateControlInterface  5404 
+ArmouryCrateKeyControl       20248 C:\WINDOWS\System32\ASUSACCI\ArmouryCrateKeyControl.exe
+AsusAppService                5364 
+AsusOptimization              4204 
+AsusOptimizationStartupTask  15292 C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_ec0a7aca8834d5bc\ASUSOptimization\AsusOptimizationStartupTask.exe
+AsusOSD                       5316 
+AsusPTPService                5388 
+ASUSSmartDisplayControl       7500 C:\Program Files (x86)\ASUS\ASUS Smart Display Control\ASUSSmartDisplayControl.exe
+AsusSoftwareManager           5380 
+AsusSoftwareManagerAgent      9400 
+AsusSwitch                    5396 
+AsusSystemAnalysis            5372 
+AsusSystemDiagnosis           5356 
+AsusWiFiSmartConnect          4328 
+audiodg                       9752 
+backgroundTaskHost           15968 C:\WINDOWS\system32\backgroundTaskHost.exe
+backgroundTaskHost           22732 C:\WINDOWS\system32\backgroundTaskHost.exe
+cmd                          13460 C:\WINDOWS\system32\cmd.exe
+CNAB4RPD                      6724 
+conhost                       7112 
+conhost                      17096 C:\WINDOWS\system32\conhost.exe
+conhost                       4392 
+cowork-svc                    9208 
+CrossDeviceResume             4604 C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe
+CrossDeviceService           19976 C:\Program Files\WindowsApps\MicrosoftWindows.CrossDevice_1.26072.116.0_x64__cw5n1h2txyewy\CrossDeviceService.exe
+csrss                         1156 
+csrss                         2980 
+ctfmon                       12092 
+DataExchangeHost             22824 C:\Windows\System32\DataExchangeHost.exe
+Discord                      18632 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+Discord                      17012 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+Discord                      17064 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+Discord                      15392 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+Discord                      15604 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+Discord                       7472 C:\Users\nguye\AppData\Local\Discord\app-1.0.9258\Discord.exe
+DtsApo4Service                5696 
+dwm                          12264 
+esif_uf                       5580 
+explorer                     20560 C:\WINDOWS\Explorer.EXE
+FileCoAuth                   16396 C:\Program Files\Microsoft OneDrive\26.163.0823.0004\FileCoAuth.exe
+FileSyncHelper                2212 
+fontdrvhost                   2000 
+fontdrvhost                   1584 
+Garena                       13484 C:\Program Files (x86)\Garena\Garena\Garena.exe
+GHelper                       1852 C:\Users\nguye\Downloads\GHelper\GHelper.exe
+gxxsvc                        3176 
+Idle                             0 
+igfxCUIServiceN               3920 
+igfxEMN                      13512 C:\WINDOWS\System32\DriverStore\FileRepository\cui_dch.inf_amd64_b20183c0e1a9d643\igfxEMN.exe
+Intel_PIE_Service             8740 
+IntelAudioService             5748 
+IntelCpHDCPSvc                2400 
+jhi_service                   6544 
+LicSvcLoc                     5948 
+LMS                           5900 
+lsass                         1344 
+Memory Compression            3792 
+MicrosoftStartFeedProvider   19900 C:\Program Files\WindowsApps\Microsoft.StartExperiencesApp_1.380.2.0_x64__8wekyb3d8bbwe\MicrosoftStartFeedProvider\MicrosoftStartFeedProvider.exe
+mongod                        6028 
+mosquitto                     6172 
+MpDefenderCoreService        20996 
+ms-teams                     22900 C:\Program Files\WindowsApps\MSTeams_26225.1806.5074.1452_x64__8wekyb3d8bbwe\ms-teams.exe
+ms-teams                     10976 C:\Program Files\WindowsApps\MSTeams_26225.1806.5074.1452_x64__8wekyb3d8bbwe\ms-teams.exe
+msedge                       15372 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       22864 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       22096 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       21956 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       21132 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       19372 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       17988 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       17384 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       15804 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       15136 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                        3432 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       14532 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       14416 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       13716 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       12204 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       11500 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       10324 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       10280 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                        8340 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedge                       14732 C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+msedgewebview2               23112 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               22784 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               20536 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               19224 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               17212 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               16116 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               14820 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                8412 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                9900 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                7672 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                6080 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                1656 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2                 672 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+msedgewebview2               13284 C:\Program Files (x86)\Microsoft\EdgeWebView\Application\153.0.4234.48\msedgewebview2.exe
+MsMpEng                      16564 
+mysqld                        7036 
+mysqld                        6124 
+NisSrv                       19920 
+NVDisplay.Container           2332 
+NVDisplay.Container           1740 
+OfficeClickToRun              6284 
+OneApp.IGCC.WinService        5660 
+OneDrive                     13564 C:\Program Files\Microsoft OneDrive\OneDrive.exe
+OneDrive.Sync.Service        22592 C:\Program Files\Microsoft OneDrive\26.163.0823.0004\OneDrive.Sync.Service.exe
+OpenConsole                   8700 C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+PresentationFontCache        11220 
+pwsh                          1428 C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.exe
+pwsh                         12348 C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.exe
+python3.11                    2808 C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python3.11.exe
+python3.11                    9336 C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python3.11.exe
+Registry                       176 
+RstMwService                  4344 
+RtkAudUService64             18172 C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_amd64_179f26ff7cd32d0f\RtkAudUService64.exe
+RtkAudUService64              6156 
+RuntimeBroker                12020 C:\Windows\System32\RuntimeBroker.exe
+RuntimeBroker                17556 C:\Windows\System32\RuntimeBroker.exe
+RuntimeBroker                17568 C:\Windows\System32\RuntimeBroker.exe
+RuntimeBroker                18524 C:\Windows\System32\RuntimeBroker.exe
+RuntimeBroker                19344 C:\Windows\System32\RuntimeBroker.exe
+RuntimeBroker                22860 C:\Windows\System32\RuntimeBroker.exe
+SearchFilterHost              1432 
+SearchFilterHost             13368 
+SearchHost                   12388 C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+SearchIndexer                 5968 
+SearchProtocolHost           15408 
+SecurityHealthService        16216 
+SecurityHealthSystray        15244 C:\Windows\System32\SecurityHealthSystray.exe
+services                      1336 
+ShellExperienceHost           9924 C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+ShellHost                     2092 C:\Windows\System32\ShellHost.exe
+sihost                        3812 C:\WINDOWS\system32\sihost.exe
+smpd                          5752 
+smss                           740 
+spoolsv                       4384 
+sqlceip                      11848 
+sqlceip                      19804 
+sqlservr                      8548 
+sqlwriter                     6228 
+StartMenuExperienceHost      11252 C:\WINDOWS\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe
+svchost                      10124 C:\WINDOWS\system32\svchost.exe
+svchost                       9912 
+svchost                       9660 
+svchost                       9528 
+svchost                       9508 
+svchost                       9424 C:\WINDOWS\system32\svchost.exe
+svchost                       9104 
+svchost                       8660 
+svchost                       8532 
+svchost                       5892 
+svchost                       6736 
+svchost                       6320 
+svchost                       6264 
+svchost                      10432 
+svchost                       5768 
+svchost                       5624 
+svchost                       5548 
+svchost                       5536 
+svchost                       5500 
+svchost                       7528 
+svchost                      10820 
+svchost                      11996 C:\WINDOWS\system32\svchost.exe
+svchost                      11456 
+svchost                      20816 C:\WINDOWS\system32\svchost.exe
+svchost                      20472 C:\WINDOWS\system32\svchost.exe
+svchost                      20252 
+svchost                      20168 
+svchost                      20144 
+svchost                      20000 
+svchost                      19952 
+svchost                      19764 
+svchost                      18368 C:\WINDOWS\system32\svchost.exe
+svchost                      17884 
+svchost                      16952 
+svchost                      15572 
+svchost                      15236 
+svchost                      13884 
+svchost                      13708 
+svchost                      12752 C:\WINDOWS\system32\svchost.exe
+svchost                      12100 
+svchost                       5416 
+svchost                      11724 
+svchost                      11280 
+svchost                       5272 
+svchost                       8924 
+svchost                       4640 
+svchost                       2544 
+svchost                       2500 
+svchost                       2476 
+svchost                       2432 
+svchost                       2392 
+svchost                       2368 
+svchost                       2180 
+svchost                       2172 
+svchost                       2164 
+svchost                       2564 
+svchost                       2156 
+svchost                       2008 
+svchost                       1988 
+svchost                       1944 
+svchost                       1936 
+svchost                       1900 
+svchost                       4904 
+svchost                       1776 
+svchost                       1732 
+svchost                       1560 
+svchost                       2036 
+svchost                       2792 
+svchost                       1812 
+svchost                       3160 
+svchost                       4540 
+svchost                       4508 
+svchost                       4212 
+svchost                       4148 
+svchost                       4140 
+svchost                       4116 
+svchost                       3972 
+svchost                       3964 
+svchost                       3948 
+svchost                       4100 
+svchost                       3852 
+svchost                       3284 
+svchost                       3860 
+svchost                       3420 
+svchost                       3468 
+svchost                       3340 
+svchost                       3652 
+svchost                       3156 
+svchost                       3656 
+svchost                       3644 
+System                           4 
+SystemSettings               20496 C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+taskhostw                     2856 
+taskhostw                     7988 C:\WINDOWS\system32\taskhostw.exe
+TbtP2pShortcutService         6300 
+TextInputHost                 4232 C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
+UltraViewer_Service           6332 
+UniKeyNT                     13340 C:\Program Files\WindowsApps\4248CephasPAD.UnikeyVietnameseKeyboard-StoreEditio_4.6.2.0_x64__e9vm632feqtm6\VFS\AppVPackageDrive\UnikeyNT.exe
+unsecapp                     12504 
+UserOOBEBroker               13660 C:\Windows\System32\oobe\UserOOBEBroker.exe
+vmnat                         6744 
+vmnetdhcp                     6400 
+vmware                       16096 D:\vn ware\vmware.exe
+vmware-authd                  6368 
+vmware-tray                  21272 D:\vn ware\vmware-tray.exe
+vmware-usbarbitrator64        6436 
+vmware-vmx                   15140 
+WidgetBoard                  10952 C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\WidgetBoard.exe
+WidgetService                10048 C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.19.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+WindowsTerminal              15600 C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.11911.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe
+wininit                       1260 
+winlogon                     22424 
+wlanext                       8620 
+WmiPrvSE                      6852 
+WmiPrvSE                      5036 
+WMIRegistrationService        6704 
+WUDFHost                      1636 
+WUDFHost                      2440 
+Zalo                          7588 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                          9316 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                          9620 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                         11764 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                         13036 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                         16868 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                         20384 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+Zalo                         22808 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\Zalo.exe
+ZaloCall                      8952 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\plugins\capture\ZaloCall.exe
+ZaloCap                      12164 C:\Users\nguye\AppData\Local\Programs\Zalo\Zalo-26.9.10\plugins\capture\ZaloCap.exe
+
