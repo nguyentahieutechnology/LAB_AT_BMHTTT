@@ -1,0 +1,9 @@
+
+Count Name
+----- ----
+   60 bulk-sender@example.invalid
+    5 normal0@example.invalid
+    5 normal1@example.invalid
+    5 normal2@example.invalid
+    5 normal3@example.invalid
+

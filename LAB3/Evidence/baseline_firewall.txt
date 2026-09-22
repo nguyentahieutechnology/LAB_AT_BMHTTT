@@ -1,0 +1,5 @@
+Name    Enabled DefaultInboundAction DefaultOutboundAction
+----    ------- -------------------- ---------------------
+Domain     True Block                Allow                
+Private    True Block                Allow                
+Public     True Block                Allow                

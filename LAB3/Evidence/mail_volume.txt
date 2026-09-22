@@ -1,0 +1,9 @@
+
+Count             : 80
+Average           : 9767,375
+Sum               : 781390
+Maximum           : 
+Minimum           : 
+StandardDeviation : 
+Property          : SizeBytes
+

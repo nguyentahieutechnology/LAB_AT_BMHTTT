@@ -1,0 +1,2 @@
+EntryLocation,Entry,Enabled,Description,Publisher,ImagePath,Timestamp
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run,LAB3_Run_Demo,enabled,Notepad,Microsoft Corporation,C:\Windows\System32\notepad.exe,2026-09-22 09:16:00
