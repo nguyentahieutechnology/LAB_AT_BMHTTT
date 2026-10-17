@@ -1,0 +1,13 @@
+Firewall Aliases - pfSense LAB 6
+-------------------------------------------------------------------------------------
+Alias Name       | Type    | Values                | Description
+-----------------+---------+-----------------------+---------------------------------
+CLIENT_A         | Host    | 10.6.0.21             | Workstation for user sv_a
+CLIENT_B         | Host    | 10.6.0.22             | Workstation for user sv_b
+POLICY_CLIENTS   | Host(s) | 10.6.0.21, 10.6.0.22  | Group of policy test workstations
+GENERAL_SITE     | Host    | 172.16.6.10           | Regular internal company portal
+JOB_SITE         | Host    | 172.16.6.20           | Job recruitment category test site
+SOCIAL_SITE      | Host    | 172.16.6.30           | Social media category test site
+RESTRICTED_SITE  | Host    | 172.16.6.40           | Restricted/Malicious category test site
+WEB_PORTS        | Port(s) | 80, 443               | Standard HTTP and HTTPS ports
+-------------------------------------------------------------------------------------

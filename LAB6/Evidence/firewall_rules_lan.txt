@@ -1,0 +1,12 @@
+Firewall Rules Matrix (LAN Interface) - First-Match Order
+---------------------------------------------------------------------------------------------------------------
+Pri | Action | Protocol | Source          | Port | Destination      | Port      | Schedule     | Log | Description
+----+--------+----------+-----------------+------+------------------+-----------+--------------+-----+---------------------------------
+ 1  | Block  | TCP      | CLIENT_A        | *    | JOB_SITE         | 80        | None         | Yes | Block Client-A access to Job site
+ 2  | Block  | TCP      | POLICY_CLIENTS  | *    | RESTRICTED_SITE  | 80        | None         | Yes | Block Restricted sites for A & B
+ 3  | Pass   | TCP      | CLIENT_B        | *    | SOCIAL_SITE      | 80        | LUNCH_WINDOW | No  | Allow Client-B Social in lunch
+ 4  | Block  | TCP      | CLIENT_B        | *    | SOCIAL_SITE      | 80        | None         | No  | Block Client-B Social outside lunch
+ 5  | Pass   | TCP      | POLICY_CLIENTS  | *    | GENERAL_SITE     | 80        | None         | No  | Allow General business site
+ 6  | Pass   | TCP      | POLICY_CLIENTS  | *    | *                | WEB_PORTS | WORK_HOURS   | No  | Allow Web during working hours
+ 7  | Block  | Any      | POLICY_CLIENTS  | *    | *                | *         | None         | Yes | Explicit Deny remaining traffic
+---------------------------------------------------------------------------------------------------------------
