@@ -1,8 +1,0 @@
-Firewall Schedules - pfSense LAB 6
--------------------------------------------------------------------------------------
-Schedule Name  | Time Range               | Days       | Purpose
----------------+--------------------------+------------+-----------------------------
-LUNCH_WINDOW   | 11:30 - 13:00            | Mon - Fri  | Allow SOCIAL_SITE for Client-B
-WORK_HOURS     | 08:00 - 17:00            | Mon - Fri  | Restrict general web browsing
-TEST_NOW       | Active during practical  | All        | Quick verification schedule
--------------------------------------------------------------------------------------
