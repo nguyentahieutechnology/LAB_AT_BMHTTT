@@ -1,0 +1,7 @@
+Source,Destination,In Schedule,Out Schedule,Actual Result,Firewall Rule Applied,Status
+Client-A (10.6.0.21),GENERAL_SITE (172.16.6.10),Allow,Allow,HTTP 200 OK,Rule 5 (Pass),PASS
+Client-A (10.6.0.21),JOB_SITE (172.16.6.20),Block,Block,Connection Dropped (Timeout),Rule 1 (Block + Log),PASS
+Client-A (10.6.0.21),RESTRICTED_SITE (172.16.6.40),Block,Block,Connection Dropped (Timeout),Rule 2 (Block + Log),PASS
+Client-B (10.6.0.22),SOCIAL_SITE (172.16.6.30),Allow,Block,HTTP 200 OK (In Lunch) / Blocked (Out),Rule 3 (Pass) / Rule 4 (Block),PASS
+Client-B (10.6.0.22),RESTRICTED_SITE (172.16.6.40),Block,Block,Connection Dropped (Timeout),Rule 2 (Block + Log),PASS
+DMZ-WEB (172.16.6.10),DC01 (10.6.0.10),Block,Block,Connection Blocked by DMZ net -> LAN net,DMZ Tab Rule 1 (Block + Log),PASS

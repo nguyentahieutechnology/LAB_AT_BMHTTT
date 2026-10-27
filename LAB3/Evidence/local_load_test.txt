@@ -1,0 +1,7 @@
+Target: http://127.0.0.1:8080/
+Total requests: 50
+Workers: 5
+Successful requests: 50
+Failed requests: 0
+Elapsed time: 0.28s
+Average latency: 0.0056s

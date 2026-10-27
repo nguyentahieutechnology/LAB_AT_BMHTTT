@@ -1,0 +1,6 @@
+TimeCreated          Id Message
+-----------          -- -------
+2026-09-22 08:45:00 4624 An account was successfully logged on: lab3user
+2026-09-22 08:46:15 4625 An account failed to log on: lab3user (Bad Password)
+2026-09-22 08:47:00 4625 An account failed to log on: lab3user (Bad Password)
+2026-09-22 08:48:10 4648 A logon was attempted using explicit credentials: lab3user

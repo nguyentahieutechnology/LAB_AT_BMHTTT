@@ -1,0 +1,5 @@
+TimeCreated          Id Message
+-----------          -- -------
+2026-09-22 09:15:20  1 Process Create: C:\Windows\System32\notepad.exe (PID: 4320)
+2026-09-22 09:16:00 13 Registry Value Set: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\LAB3_Run_Demo = notepad.exe
+2026-09-22 09:20:10  1 Process Create: schtasks.exe (Task: LAB3_Persistence_Demo)
