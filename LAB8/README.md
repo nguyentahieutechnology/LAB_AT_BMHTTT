@@ -42,7 +42,7 @@ Giao diện **DNSLAB (`10.9.0.1/24`)** được thiết lập tường lửa ngh
 
 > ⚠️ **Lưu ý đặc biệt:** Interface `DNSLAB` trên pfSense tuyệt đối **không được gán Upstream Gateway** (nếu gán sẽ bị pfSense coi là WAN và làm hỏng routing/NAT).
 
-#### [HÌNH 1: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 1](./Images/Hinh1_pfSense_Rules.png)
 * **Hình:** Cấu hình giao diện DNSLAB và Ruleset Firewall trên pfSense
 * **Mô tả:** Chụp WebGUI pfSense tại mục `Interfaces > Assignments` (`OPT2` gán IP `10.9.0.1/24`, không gateway) và tab `Firewall > Rules > DNSLAB` thể hiện 5 rules theo bảng ma trận.
 
@@ -69,7 +69,7 @@ sudo systemctl restart bind9
 sudo systemctl status bind9 --no-pager
 ```
 
-#### [HÌNH 2: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 2](./Images/Hinh2_BIND9_Config.png)
 * **Hình:** Kiểm tra tính hợp lệ của cấu hình BIND9 và trạng thái dịch vụ
 * **Mô tả:** Lệnh `named-checkconf`, `named-checkzone` trả về `OK` và `systemctl status bind9` hiển thị `Active: active (running)`.
 
@@ -128,7 +128,7 @@ sudo python3 auth_dns_delayed.py --bind 172.16.6.20 --delay 1.5
 # Kết quả hiển thị: LAB9 AUTH-DNS listening 172.16.6.20:53, delay=1.5s, target=www.external.lab9.test. -> 172.16.6.10
 ```
 
-#### [HÌNH 3: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 3](./Images/Hinh3_Auth_DNS_Delayed.png)
 * **Hình:** Kiểm tra địa chỉ IP trên các máy và khởi động Authoritative DNS
 * **Mô tả:** Lệnh `ip a` / `ip route` từ cả 3 máy: DNS-SERVER (`10.9.0.10`), VICTIM (`10.9.0.100`), ATTACKER (`10.9.0.200`) và terminal đang chạy `auth_dns_delayed.py` trên `172.16.6.20`.
 
@@ -152,7 +152,7 @@ dns.qry.name == "www.external.lab9.test"
   - Lệnh `curl` nhận phản hồi `HTTP/1.1 200 OK` từ trang web DMZ thật.
   - Wireshark trên Kali bắt được đúng luồng truy vấn hợp lệ.
 
-#### [HÌNH 4: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 4](./Images/Hinh4_Baseline_Dig.png)
 * **Hình:** Kết quả phân giải Baseline và gói tin bắt trên Wireshark
 * **Mô tả:** Terminal Victim chạy `dig www.external.lab9.test` trả về `172.16.6.10` và Wireshark trên Kali ghi nhận truy vấn DNS bình thường.
 
@@ -185,7 +185,7 @@ sudo cp /etc/hosts.bak /etc/hosts
 * **Hiện tượng:** Lệnh `curl` và trình duyệt web hiển thị trang web giả mạo của Kali (`10.9.0.200`). Nhưng `dig @10.9.0.10 www.lab9.test` vẫn trả về địa chỉ IP chuẩn `172.16.6.10`.
 * **Giải thích kỹ thuật:** Hệ điều hành Linux sử dụng cơ chế **Name Service Switch** (quy định trong `/etc/nsswitch.conf` với dòng `hosts: files dns`). Các ứng dụng thông thường sử dụng hàm thư viện `getaddrinfo()` nên kiểm tra tệp cục bộ `/etc/hosts` trước. Trong khi đó, `dig` gửi truy vấn trực tiếp qua socket mạng tới port 53 của nameserver chỉ định, bỏ qua hoàn toàn file `/etc/hosts`.
 
-#### [HÌNH 5: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 5](./Images/Hinh5_Task1_Hosts_Redirect.png)
 * **Hình:** Minh chứng Task 1 - curl chuyển hướng sang Kali nhưng dig vẫn trả IP gốc
 * **Mô tả:** Terminal hiển thị song song `curl http://www.lab9.test` nhận web fake của Kali `10.9.0.200`, trong khi `dig @10.9.0.10 www.lab9.test` trả về `172.16.6.10`.
 
@@ -217,7 +217,7 @@ curl http://www.external.lab9.test
 * **DNS Answer:** Bản ghi A trỏ `www.external.lab9.test` về `10.9.0.200`.
 * **Cuộc đua thời gian (Race Condition):** Gói giả từ Kali gửi qua LAN L2 chỉ mất vài ms, đến trước phản hồi hợp lệ (vốn bị hoãn 1.5s trên AUTH-DNS). Client tiếp nhận gói giả đầu tiên và drop gói hợp lệ đến sau.
 
-#### [HÌNH 6: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 6](./Images/Hinh6_Task2_Direct_Spoofing.png)
 * **Hình:** Phân tích Wireshark Task 2 - Cặp gói Query và Forged Response
 * **Mô tả:** Wireshark trên Kali lọc `dns`: Thấy rõ gói Query (ID=0xXXXX) từ Victim, gói Forged Response mang cùng ID=0xXXXX trả về IP `10.9.0.200` đến trước, và gói Legitimate Response đến sau.
 
@@ -253,7 +253,11 @@ sudo grep -A 5 "www.external.lab9.test" /var/cache/bind/named_dump.db
 * **Kết quả:** Khi script trên Kali đã dừng, Victim query lại vẫn nhận IP `10.9.0.200` được trả về trực tiếp từ cache của BIND9!
 * **Ý nghĩa TTL (120s):** Bản ghi độc hại được BIND9 lưu giữ và phục vụ cho toàn bộ client trong mạng trong suốt 120 giây mà không cần truy vấn ra ngoài.
 
-#### [HÌNH 7: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 7.1](./Images/Hinh7_1_Task3_BIND9_Dump.png)
+
+![Hình 7.2](./Images/Hinh7_2_Task3_Victim_Dig_Cached.png)
+
+![Hình 7.3](./Images/Hinh7_3_Task3_Resolver_Poison.png)
 * **Hình:** Minh chứng Task 3 - Dump cache BIND9 và Victim nhận IP giả khi script đã tắt
 * **Mô tả:** Terminal DNS-SERVER hiển thị lệnh `grep` bản ghi `www.external.lab9.test` trong `/var/cache/bind/named_dump.db` chứa IP `10.9.0.200`, kèm màn hình Victim chạy `dig` nhận kết quả `10.9.0.200` khi Kali đã ngắt script.
 
@@ -281,7 +285,7 @@ sudo resolvectl flush-caches
 * **Thao tác:** Xóa bỏ khối lệnh `server 172.16.6.20 { send-cookie no; };` trong `/etc/bind/named.conf.options`, sau đó `sudo systemctl restart bind9`. Chạy lại kịch bản Task 3 trên Kali.
 * **Kết quả:** BIND9 yêu cầu và kiểm tra Cookie trong gói tin phản hồi. Gói tin giả mạo của script không có cookie hợp lệ nên bị BIND9 loại bỏ; cuộc tấn công Cache Poisoning bị vô hiệu hóa hoàn toàn!
 
-#### [HÌNH 8: DÁN ẢNH CHỤP MINH CHỨNG TẠI ĐÂY]
+![Hình 8](./Images/Hinh8_Restore_Secure_DNS.png)
 * **Hình:** Khôi phục hệ thống thành công và cấu hình phòng thủ DNS COOKIE
 * **Mô tả:** Sau khi flush cache, `dig www.external.lab9.test` trả về đúng `172.16.6.10`; cấu hình VirtualBox của Kali đưa Promiscuous Mode về `Deny`.
 
