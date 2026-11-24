@@ -26,6 +26,12 @@
 | **Bouncy Castle Provider**| `org.bouncycastle:bcprov-jdk18on:1.78.1` | Thư viện mở rộng Java Cryptography Architecture (JCA/JCE), cung cấp thuật toán mật mã khối Twofish. | **BUILD SUCCESS** |
 | **Python Runtime & Lib** | Python 3.10+ & thư viện `cryptography`<br>• Lệnh cài đặt: `py -m pip install cryptography` | Môi trường triển khai bài nâng cao AES-CBC đa nền tảng và giao diện đồ họa Tkinter GUI. | **SẴN SÀNG** |
 
+### 2. Minh chứng khởi tạo môi trường và CSDL SQL Server
+
+![H1: Cấu hình pom.xml nạp mssql-jdbc, bcprov-jdk18on và kết quả biên dịch Maven (BUILD SUCCESS)](Images/H1_Maven_Build_Success.png)
+
+![H2: Khởi tạo CSDL LAB2_MaHoaHienDai, các bảng dbo.app_users và dbo.crypto_history trên SQL Server Management Studio](Images/H2_SSMS_Database.png)
+
 ---
 
 ## II. THIẾT KẾ KIẾN TRÚC PROJECT VÀ CÁC MODULE DÙNG CHUNG
@@ -132,6 +138,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Khóa (Key): `12345678` ($8 \text{ ký tự}$)
   - Kết quả: $\text{Decrypt}(\text{Encrypt}(x)) = x$. Giải mã với khóa sai sẽ lập tức ném ra biệt lệ `BadPaddingException` (hoặc thông báo lỗi khối đệm không hợp lệ).
 
+![H3: Giao diện và kết quả mã hóa/giải mã thuật toán DES (frm_DES)](Images/H3_frm_DES.png)
+
 ---
 
 ### 2. Bài 2.2: Mật mã TripleDES (3DES / TDEA)
@@ -149,6 +157,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Khóa đúng ($24 \text{ ký tự}$): `123456789012345678901234` $\to$ Giải mã thành công, tái lập $100\%$ bản rõ ban đầu.
   - Khóa thử nghiệm sai ($23 \text{ ký tự}$): `12345678901234567890123` $\to$ Báo lỗi khóa không đủ 24 ký tự theo đúng yêu cầu kiểm thử Bảng 2.1.
 
+![H4: Giao diện và kiểm soát lỗi độ dài khóa thuật toán TripleDES (frm_TripleDES)](Images/H4_frm_TripleDES.png)
+
 ---
 
 ### 3. Bài 2.3: Mật mã AES (Advanced Encryption Standard) tích hợp SQL Server
@@ -162,6 +172,10 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Đăng ký user: `student01` / `MatKhau@123` $\to$ Thông báo tạo tài khoản thành công.
   - Bấm Login $\to$ Cửa sổ báo *“Login thành công”*, ô Ticket hiển thị chuỗi 32 ký tự HEX.
   - Thực hiện Encrypt chuỗi văn bản $\to$ Giải mã thành công; mở `frm_LichSu` thấy xuất hiện ngay bản ghi kiểm toán tương ứng.
+
+![H5: Đăng ký tài khoản, băm mật khẩu kèm Salt vào bảng dbo.app_users (frm_AES)](Images/H5_frm_AES_Register.png)
+
+![H6: Đăng nhập hệ thống, cấp Ticket 32 HEX và mã hóa dữ liệu AES-256 GCM](Images/H6_frm_AES_Login_Encrypt.png)
 
 ---
 
@@ -180,6 +194,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Bản rõ (Plaintext): `Plaintext`
   - Khóa (Key): `Key`
   - Kết quả bản mã HEX thu được: `BBF316E8D940AF0AD3` $\to$ **Khớp chính xác 100% với giá trị kiểm thử chuẩn của Bảng 2.1**.
+
+![H7: Giao diện và kết quả mã hóa mật mã dòng RC4 (Plaintext/Key -> BBF316E8D940AF0AD3)](Images/H7_frm_RC4.png)
 
 ---
 
@@ -206,6 +222,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Nhập Key cố định $\to$ Bấm *Generate IV* $\to$ Bấm *Encrypt* $\to$ Bấm *Save File* lưu ra ổ đĩa.
   - Xóa trắng form $\to$ Bấm *Open File* mở lại tệp vừa lưu $\to$ Form tự động nạp lại đầy đủ Key, IV và Ciphertext $\to$ Bấm *Decrypt* thu lại bản rõ nguyên vẹn.
 
+![H8: Giao diện mã hóa Twofish tự động lưu và mở IV qua tệp tin (frm_Twofish)](Images/H8_frm_Twofish.png)
+
 ---
 
 ## IV. KẾT QUẢ TRIỂN KHAI CÁC BÀI TẬP NÂNG CAO
@@ -229,6 +247,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Nhập bản rõ bất kỳ $\to$ Bấm sinh Nonce ngẫu nhiên $\to$ Encrypt.
   - Kiểm tra độ dài: Kích thước byte bản mã khớp chính xác kích thước byte bản rõ. Quá trình giải mã tái lập $100\%$ bản rõ.
 
+![H9: Giao diện mã hóa chế độ đếm AES-CTR trên Java không cần đệm (frm_AES_CTR)](Images/H9_frm_AES_CTR.png)
+
 ---
 
 ### 2. Bài 2.6.2: Triển khai AES-CBC trên Python với thư viện `cryptography` & GUI Tkinter
@@ -249,6 +269,8 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Khi toàn bộ các bước kiểm tra thành công, ứng dụng in dòng chữ thông báo kiểm thử thành công:
     $$\textbf{SELF-TEST OK}$$
 
+![H10: Ứng dụng Tkinter GUI Python AES-CBC và kết quả thực thi lệnh self-test thành công](Images/H10_Python_AES_CBC.png)
+
 ---
 
 ## V. HỆ THỐNG GIAO DIỆN TỔNG HỢP VÀ ĐIỀU HƯỚNG
@@ -260,9 +282,13 @@ Hệ thống sử dụng cơ sở dữ liệu `LAB2_MaHoaHienDai` gồm 2 bảng
   - Nhóm bài tập nâng cao: Nút bấm mở form `frm_AES_CTR` và nhãn hướng dẫn thực thi tệp `aes_cbc_gui.py`.
   - Nhóm quản trị hệ thống: Nút mở `frm_KetNoiSQL` và `frm_LichSu`.
 
+![H11: Cửa sổ Menu chính điều hướng toàn bộ chương trình frm_Menu (Run Project F6)](Images/H11_frm_Menu.png)
+
 ### 2. Cửa sổ giám sát kết nối và lịch sử CSDL (`frm_KetNoiSQL`, `frm_LichSu`)
 * `frm_KetNoiSQL`: Cho phép kiểm tra trạng thái máy chủ CSDL SQL Server, thay đổi linh hoạt địa chỉ Host, Cổng TCP, Tên đăng nhập và Mật khẩu kết nối.
 * `frm_LichSu`: Tích hợp bảng dữ liệu `JTable` phân trang, tự động truy vấn bảng `dbo.crypto_history` hiển thị trực quan các trường: Mã lịch sử, Tên thuật toán, Hành động (ENCRYPT/DECRYPT), Người dùng thực thi, Kích thước Input/Output và Dấu thời gian.
+
+![H12: Lưới hiển thị nhật ký kiểm toán mật mã từ SQL Server trên frm_LichSu](Images/H12_frm_LichSu.png)
 
 ---
 
